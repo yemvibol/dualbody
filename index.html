@@ -8,18 +8,27 @@
 
 <body>
     <header class="sticky row">
-        <h4>Dual Body (control the robot with a short voice command and receive walking sound and visual feedbak)</h4> Commands: "Find Newton", "Find kitchen", "Find library" (Other interactive contents will be comming soon.)
+        <h4>Dual Body (transfer your intention via your voice)</h4> Fore example: "I will walk around", "I will find kitchen", "I will find library" 
     </header>
 	  
-<div id="listTalk" style="border: 1px solid #000; height: 40px; overflow-y: scroll; margin-bottom: 5px">
+<div id="listTalk" style="border: 1px solid #000; height: 50px; overflow-y: scroll; margin-bottom: 5px">
  <div id="result_text"></div>
+ <div id="getresult" style="color:green;"></div>
+</div>
 
-</div>
-<div id="getresult" style="color:green;"></div>
-<div id="status">Click connect to TriStar then click start talking</div>
-<div>
-<p><input id="start_recognition" style="color: #000; background-color: #ff9b00cf;" type="submit" value="Start talking" /></p>
-</div>
+
+<div id="status">Set RoomID, click connect to TriStar, then click start talking</div>
+<select id="lang">
+    <option value="en-US">English(US)</option>
+    <option value="en-GB">English(UK)</option>
+	<option value="ja-JP">Japanese</option>
+    <option value="fr-FR">French</option>
+    <option value="de-DE">German</option>
+    <option value="cmn-Hans-CN">Chinese</option>
+    <option value="ko-KR">Korean</option>
+</select>
+	
+
 
 <div>
 	<div style="float:left;width:20%;">
@@ -63,3 +72,4 @@
 </body>
 
 </html>
+
