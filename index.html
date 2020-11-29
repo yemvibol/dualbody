@@ -8,9 +8,10 @@
 
 <body>
     <header class="sticky row">
-        <h4>Dual Body (transfer your intention via your voice)</h4> Fore example: "I will walk around", "I will find kitchen", "I will find library" 
+        <h4>Dual Body (transfer your intention to avatar robot via your voice)</h4> Current detectable tasks: "I will walk for around", "I will find kitchen", "I will find library" 
     </header>
 
+<div>	  
 <select id="lang">
     <option value="en-US">English(US)</option>
     <option value="en-GB">English(UK)</option>
@@ -20,16 +21,18 @@
     <option value="cmn-Hans-CN">Chinese</option>
     <option value="ko-KR">Korean</option>
 </select>
-	
+</div>	
+	  
 <div id="listTalk" style="border: 1px solid #000; height: 50px; overflow-y: scroll; margin-bottom: 5px">
  <div id="result_text"></div>
  <div id="getresult" style="color:green;"></div>
 </div>
 
 
-<div id="status">Set RoomID, click connect to TriStar robot, then transfer your intention via your own voice</div>
+<div id="status">Set RoomID, click Connect to TriStar robot, then transfer your intention via your own voice.
+Click <input id="voiceRec" type="submit" value="Voice Recognition" /> if  Voice to Text does not work.
+</div>
 
-	
 
 
 <div>
@@ -74,4 +77,5 @@
 </body>
 
 </html>
+
 
