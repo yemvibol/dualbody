@@ -12,6 +12,7 @@ const textList = document.getElementById('result_text');
 const textBox = document.getElementById("listTalk");
 const text = document.getElementById('getresult');
 const lang = document.getElementById('lang');
+const voiceRec = document.getElementById('voiceRec');
 
 window.onload = function() {
 	recognition.lang = lang.value;
@@ -20,8 +21,6 @@ window.onload = function() {
     navigator.mediaDevices.getUserMedia({ audio: true, video: false })
             .then(handleSuccess);
 };
-
-
 
 recognition.onresult = function(e){
     text.innerText = '';
@@ -41,3 +40,17 @@ recognition.onend = function(){
 	recognition.lang = lang.value;
     recognition.start();     
 };
+
+voiceRec.addEventListener('click' , function() {
+	text.innerText = 'Voice Recognition'
+	recognition.lang = lang.value;
+    recognition.start(); 
+});
+
+lang.addEventListener('change', (event) => {
+	recognition.stop();
+	text.innerText = event.target.value;
+	recognition.lang = lang.value;
+    recognition.start();
+});
+
