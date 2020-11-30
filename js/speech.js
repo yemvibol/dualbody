@@ -18,8 +18,7 @@ window.onload = function() {
 	recognition.lang = lang.value;
 	recognition.start();
     
-    navigator.mediaDevices.getUserMedia({ audio: true, video: false })
-            .then(handleSuccess);
+    
 };
 
 recognition.onresult = function(e){
@@ -43,7 +42,6 @@ recognition.onend = function(){
 
 voiceRec.addEventListener('click' , function() {
 	text.innerText = 'Voice Recognition'
-	textBox.scrollTop = textBox.scrollHeight;
 	recognition.lang = lang.value;
     recognition.start(); 
 });
@@ -51,7 +49,6 @@ voiceRec.addEventListener('click' , function() {
 lang.addEventListener('change', (event) => {
 	recognition.stop();
 	text.innerText = event.target.value;
-	textBox.scrollTop = textBox.scrollHeight;
 	recognition.lang = lang.value;
     recognition.start();
 });
