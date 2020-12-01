@@ -13,6 +13,7 @@ const textBox = document.getElementById("listTalk");
 const text = document.getElementById('getresult');
 const lang = document.getElementById('lang');
 const voiceRec = document.getElementById('voiceRec');
+const tsend = document.getElementById('textSend');
 
 window.onload = function() {
 	recognition.lang = lang.value;
@@ -26,11 +27,12 @@ recognition.onresult = function(e){
     for (let i = e.resultIndex; i < e.results.length; i++){
         let result = e.results[i][0].transcript;
         if(e.results[i].isFinal){
-            textList.innerHTML += '<div>'+result+'</div>';
-			sendSpData();
+            textList.innerHTML += '<div>'+tsend.innerHTML+'</div>';
+	    tsend.innerHTML = result;
+	    sendSpData();
         } else {
             text.innerText += result;
-			textBox.scrollTop = textBox.scrollHeight;
+	    textBox.scrollTop = textBox.scrollHeight;
         }
     }
 };
