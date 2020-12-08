@@ -57,7 +57,6 @@ document.querySelector("#clientIdInput").value = options.clientId;
 
 function onMessage(e) {
     const messages = document.querySelector("#messages").value;
-    newMessages = messages ? (messages + '\n' + e.data) : e.data;
-    document.querySelector("#messages").value = newMessages;
+    document.querySelector("#messages").value = enc.decode(e.data);
 }
 
