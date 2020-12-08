@@ -56,6 +56,7 @@ document.querySelector("#roomIdInput").value = roomId;
 document.querySelector("#clientIdInput").value = options.clientId;
 
 function onMessage(e) {
+    var enc = new TextDecoder("utf-8");
     const messages = document.querySelector("#messages").value;
     document.querySelector("#messages").value = enc.decode(e.data);
 }
